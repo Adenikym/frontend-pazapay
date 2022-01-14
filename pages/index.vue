@@ -1,5 +1,5 @@
 <template>
-  <v-row style="background: rgba(250, 250, 251, 1);
+  <v-row style="background: #fff;
 ">
     <v-col    cols="5" class="d-flex flex-column  mt-3">
   

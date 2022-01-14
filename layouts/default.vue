@@ -35,7 +35,7 @@
       fixed
       app
       elevation="0"
-      color="rgba(250, 250, 251, 1);"
+      color="rgba(255, 255, 255, 1);"
       style="border-bottom:1.5px solid grey"
 
     >
@@ -109,11 +109,7 @@ export default {
           title: 'Transfer',
           to: '/transfer'
         },
-          {
-          icon: 'mdi-chart-box-outline',
-          title: 'Transactions',
-          to: '/transactions'
-        },
+         
          {
           icon: 'mdi-credit-card',
           title: 'Pay Bills',
