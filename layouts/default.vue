@@ -105,7 +105,7 @@ export default {
         {
           icon: 'mdi-swap-horizontal',
           title: 'Transfer',
-          to: '/inspire'
+          to: '/transfer'
         },
           {
           icon: 'mdi-chart-box-outline',
