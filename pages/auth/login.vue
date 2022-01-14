@@ -59,9 +59,11 @@
 </v-btn>
 
 <div class="d-flex justify-end mt-4">
+   <nuxt-link to="/">  
 <v-btn height="40px" depressed color="rgba(38, 115, 209, 1)" style="text-transform:lowercase;"  class="d-flex px-4">
     <span style="color:#fff;">Login to your account</span>
 </v-btn>
+   </nuxt-link>
 </div>
  
 

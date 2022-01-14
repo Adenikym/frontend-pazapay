@@ -58,9 +58,11 @@
      </div>
    
       <v-spacer />
+       <nuxt-link to="/auth/signup" style="text-decoration:none">  
      <v-btn style="text-transform:none;font-size:18px;font-weight:500" text color="rgba(255, 148, 143, 1)">
        Logout
      </v-btn>
+       </nuxt-link>
     </v-app-bar>
     <v-main>
       <v-container>
