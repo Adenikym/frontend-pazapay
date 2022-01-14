@@ -2,14 +2,17 @@
 
 
   <v-row class="">
-<v-col class="col-6 describe">
+<v-col cols="6" class=" describe">
 
-    <v-card style="margin-top:45%" height="115px" rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4 col-6 offset-2 rounded-xl">
+<v-col cols="8">
+
+    <v-card  style="margin-top:70%" height="115px" rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4  offset-2 rounded-xl">
         <span class="ml-2" style="color:rgba(15, 45, 82, 1);font-weight:500;font-size:26px">Account Opening</span>
         <br>
         
         <span class="mt-4 ml-2"  style="color:rgba(15, 45, 82, 1);font-weight:400;font-size:16px;">Open an account with paza today</span>
     </v-card>
+    </v-col>
 </v-col>
 <v-col class="col-6 ">
     <v-col class="d-flex    justify-end px-4 py-4 mt-4">
