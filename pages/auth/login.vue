@@ -19,7 +19,8 @@
     <v-col class="d-flex    justify-end px-4 py-4 mt-4">
       <span class="mt-3">Don't have an account?</span>
       
-    <v-btn height="50px" text="true" color="rgba(38, 115, 209, 1)" depressed style="background:transparent;border:1.2px solid rgba(38, 115, 209, 1);text-transform:lowercase" class="ml-2 py-4 mr-4">Sign up here</v-btn>
+  <nuxt-link to="/auth/signup">  <v-btn  height="50px" text="true" color="rgba(38, 115, 209, 1)" depressed style="background:transparent;border:1.2px solid rgba(38, 115, 209, 1);text-transform:lowercase" class="ml-2 py-4 mr-4">Sign up here</v-btn>
+  </nuxt-link>
   </v-col>
 
   <div class="">
