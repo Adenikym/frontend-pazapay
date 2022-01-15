@@ -2,7 +2,7 @@
 
 
   <v-row class="">
-<v-col cols="6" class=" describe">
+<v-col  cols="6" class=" describe d-sm-block d-none">
 
  <v-col cols="8">
 
@@ -15,7 +15,7 @@
 
     </v-col>
 </v-col>
-<v-col class="col-6 ">
+<v-col  sm="6" md="6" cols="12" class="">
     <v-col class="d-flex    justify-end px-4 py-4 mt-4">
       <span class="mt-3">Don't have an account?</span>
       
@@ -32,7 +32,7 @@
     ref="form"
     v-model="valid"
     lazy-validation
-    class="col-8"
+ class="col-md-8 "
   >
 
     <v-text-field
@@ -54,8 +54,8 @@
     ></v-text-field>
 
   
-<v-btn style="text-transform:lowercase" text="true" color="rgba(38, 115, 209, 1)" nuxt>
-    forgot password
+<v-btn style="text-transform:none" text="true" color="rgba(38, 115, 209, 1)" nuxt>
+    Forgot Password
 </v-btn>
 
 <div class="d-flex justify-end mt-4">

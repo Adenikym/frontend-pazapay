@@ -3,11 +3,11 @@
     <v-col cols="11" class="">
     
  <div class="mt-4 col-12 px-0">
-   <v-card elevation="1" color="#fff" style="width:100%"  class=" d-flex justify-end  align-self-center py-3">
-     <v-btn>Top up balance</v-btn>
+   <div elevation="1" color="#fff" style="width:100%"  class=" d-flex justify-end  align-self-center py-3">
+     <v-btn class="d-sm-block d-none"  @click="overlay = !overlay" color="#fff" style="text-transform:none; font-size:15px">Top up balance</v-btn>
     
-   </v-card>
-    <v-row class="mt-1" style="background:rgba(244, 248, 253, 1)">
+   </div>
+    <v-row class="mt-1 d-sm-flex d-none" style="background:rgba(244, 248, 253, 1)">
        <v-col style="border-right:1px solid rgba(55, 80, 111, 0.35);" cols="4" class=" d-flex flex-column justify-center align-center py-4">
   <v-text
        
@@ -54,18 +54,33 @@
     </v-col>
 
     <v-col cols="11" class="" >
-      <div style="background:rgba(244, 248, 253, 1)" class="d-flex justify-space-between py-2 px-4">
-        <h6>Transfer</h6>
 
-        <v-btn  @click="overlay = !overlay" color="#fff">
-          <v-icon>
+      <div  style="background:rgba(244, 248, 253, 1)" class="d-sm-flex d-none justify-space-between py-4 px-4">
+        <h6 style="font-size:18px;color:rgba(55, 80, 111, 1);font-weight:400;">Transfer</h6>
+
+        <v-btn color="rgba(38, 115, 209, 1)"  @click="overlay = !overlay" >
+          <v-icon style="color:#fff">
             mdi-plus
           </v-icon>
-          transfer
+      <span style="color:#fff;text-transform:none;font-size:15px">New  Transfer</span>  
         </v-btn>
       </div>
+
+      <div  class="d-sm-none d-flex justify-space-between py-4 px-4 col-12">
+       <v-btn  @click="overlay = !overlay" color="#fff" style="text-transform:none; font-size:15px">Top up balance</v-btn>
+    
+
+        <v-btn color="rgba(38, 115, 209, 1)"  @click="overlay = !overlay" >
+          <v-icon style="color:#fff">
+            mdi-plus
+          </v-icon>
+      <span style="color:#fff;text-transform:none;font-size:15px">New  Transfer</span>  
+        </v-btn>
+      </div>
+
+
       <div class="py-3">
-        <h5 class="ml-5">No Transfers</h5>
+        <h5 style="color:rgba(55, 80, 111, 1);font-size:14px;font-weight:400" class="ml-5">No Transfers</h5>
       </div>
 
      
@@ -77,9 +92,12 @@
   ></v-data-table>
 
     </v-col>
-    <v-overlay  :value="overlay">
-      <Wallet style="width:450px;" />
-    </v-overlay>
+      <v-overlay :value="overlay">
+        <Wallet class="d-sm-block d-none" style="width:433px"/>
+        <v-col style="d-flex flex-column justify-end align-end">
+         <Wallet class="d-sm-none d-block" style="width:420px"/>
+        </v-col>
+      </v-overlay>
   </v-row>
 </template>
 
@@ -108,7 +126,12 @@ export default {
         ],
       }
     },
-   
+   methods:{
+      closeOverlay(){
+             this.overlay=false
+          
+         }
+   }
   }
 
 

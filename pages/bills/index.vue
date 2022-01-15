@@ -1,27 +1,27 @@
 <template>
   <v-row  class="px-6 py-2 d-flex justify-center align-center">
 
-<v-col cols="11"  class="d-flex mt-6" style="background: rgba(244, 248, 253, 1);" >
+<v-col cols="12" md="11"  sm="11" class="d-flex flex-wrap mt-6" style="background: rgba(244, 248, 253, 1);" >
 
-<v-col cols="2" class="ml-4  d-flex flex-column justify-center align-center"  >
+<v-col cols="5" sm="4" md="2"  class="ml-4  d-flex  flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
 <img src="../../assets/wifi.svg" alt="">
 </v-card>
 <span class="mt-3">Data</span>
 </v-col>
-<v-col   @click="overlay = !overlay" cols="2" class="ml-4  d-flex flex-column justify-center align-center"  >
+<v-col   @click="overlay = !overlay" cols="5" sm="4" md="2" class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
 <img src="../../assets/airtime.svg" alt="">
 </v-card>
 <span class="mt-3">Airtime</span>
 </v-col>
-<v-col  cols="2" class="ml-4  d-flex flex-column justify-center align-center"  >
+<v-col cols="5" sm="4" md="2"  class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
 <img src="../../assets/lightbulb.svg" alt="">
 </v-card>
 <span class="mt-3">Power</span>
 </v-col>
-<v-col cols="2" class="ml-4  d-flex flex-column justify-center align-center"  >
+<v-col cols="5" sm="4" md="2"  class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
 <img src="../../assets/cable.svg" alt="">
 </v-card>
@@ -44,11 +44,14 @@ export default {
 data(){
     return{
          overlay: false,
-         closeOverlay(){
-             this.overlay=false
-             console.log('blue')
-         }
+       
     }
+},
+methods:{
+  closeOverlay(){
+             this.overlay=false
+          
+         }
 }
 }
 </script>

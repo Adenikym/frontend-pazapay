@@ -12,8 +12,8 @@
 <!-- 
     edit profile form -->
 
-      <v-col cols="11" class="" >
-      <div style="background:rgba(244, 248, 253, 1)" class="d-flex  py-2 px-4">
+      <v-col cols="12" md="11" sm="11" class="" >
+      <div style="background:rgba(244, 248, 253, 1)" class="d-flex  py-3 px-4">
     
 
         <v-btn style="text-transform:none"  @click="openPersonal" color="#fff">
@@ -25,7 +25,7 @@
      Security
         </v-btn>
 
-         <v-btn style="text-transform:none" class="ml-6"  @click="openPin" color="#fff" >
+         <v-btn style="text-transform:none" class="ml-6 d-sm-block d-none"  @click="openPin" color="#fff" >
          
          Transaction Pin
         </v-btn>
@@ -47,7 +47,11 @@
 
     </v-col>
 
-
+<v-col cols="11"  class="d-flex justify-end px-3">
+  <v-btn class="mr-4" color="#fff">
+    <span style="text-transform:none">Save</span>
+  </v-btn>
+</v-col>
   </v-row>
 </template>
 
@@ -55,7 +59,7 @@
 export default {
  data: () => ({
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-      form:"Personal"
+      form:""
     }),
 
     methods:{

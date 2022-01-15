@@ -10,18 +10,18 @@
 <div class="d-flex justify-space-between px-2 py-4" style="border-bottom:1px solid grey;">
   <span style="color:rgba(55, 80, 111, 1)">Top up wallet</span>
 
-    <v-icon color="grey">
+    <v-icon @click="closeForm" color="grey">
       mdi-close-circle
     </v-icon>
 
 </div>
     
-    <v-col cols="12" class="mt-4">
+    <v-col cols="12" class="mt-4 ">
     <v-text-field
       v-model="Amout"
-      :counter="10"
+     
       :rules="nameRules"
-      label="Name"
+      label="Amount"
       required
       color="grey"
       outlined
@@ -55,12 +55,13 @@
       Reset Validation
     </v-btn> -->
     
-    <template>
+
   <v-btn height="50px" class="mt-4 mb-4" style="background: rgba(38, 115, 209, 1);text-transform:none;
-" block color="rgba(38, 115, 209, 1);">
+" block color="rgba(38, 115, 209, 1);"
+@click="closeForm">
  Continue
   </v-btn>
-</template>
+
     </v-col>
     
   </v-form>
@@ -72,7 +73,7 @@
       valid: true,
       name: '',
       nameRules: [
-        v => !!v || 'Name is required',
+        v => !!v || 'Amount is required',
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
       ],
       email: '',
@@ -100,6 +101,9 @@
       resetValidation () {
         this.$refs.form.resetValidation()
       },
+      closeForm(){
+        this.$parent.closeOverlay()
+      }
     },
   }
 </script>

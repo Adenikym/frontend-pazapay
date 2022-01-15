@@ -1,11 +1,11 @@
 <template>
   <v-row style="background: #fff;
 ">
-    <v-col    cols="5" class="d-flex flex-column  mt-3">
+    <v-col    cols="12" sm="5" md="5" class="d-flex flex-column  mt-3">
   
     
   <v-card
-    class="mx-auto rounded-xl mt-4"
+    class="mx-auto rounded-xl mt-4 px-3"
 
 style="width:90%;background:rgba(38, 115, 209, 1);color:#fff"
     outlined
@@ -17,10 +17,10 @@ style="width:90%;background:rgba(38, 115, 209, 1);color:#fff"
         <v-list-item-title style="color:#fff" class="text-h6  ">
           Balance
         </v-list-item-title>
-        <v-list-item-subtitle style="color:#fff">Today 20th September 2021</v-list-item-subtitle>
+        <v-list-item-subtitle style="color:#fff;font-size:9px;">Today 20th September 2021</v-list-item-subtitle>
       </v-list-item-content>
 
-   <v-btn color="#fff" style="color:rgba(38, 115, 209, 1);text-transform:none"  depressed >
+   <v-btn  @click="overlay = !overlay" color="#fff" style="color:rgba(38, 115, 209, 1);text-transform:none"  depressed >
      Add Money
    </v-btn>
 
@@ -45,10 +45,7 @@ style="width:90%;background:rgba(38, 115, 209, 1);color:#fff"
     </div>
   </v-card>
 
-  <div class="px-4 ml-1">
-    <h4 style="color:rgba(15, 45, 82, 1) " class="ml-4 mt-6 px-2">Explore</h4>
-  </div>
-
+ 
   
 
    
@@ -61,7 +58,7 @@ style="width:80%;background:#fff;color:#fff"
     <v-list-item three-line>
       <v-list-item-content>
        
-        <v-list-item-title style="color:rgba(55, 80, 111, 1)" class="text-h6" color="white">
+        <v-list-item-title style="color:rgba(55, 80, 111, 1);font-size:18px;" class="text-h6" color="white">
        Buy. Shop. Get Reward
         </v-list-item-title>
         <v-list-item-subtitle>Get cashback reward from marketplace
@@ -82,12 +79,15 @@ anytime you make a purchase.</v-list-item-subtitle>
   
   </v-card>
 
+
+
+
    
 
    
     </v-col>
 
-     <v-col cols="7">
+     <v-col class="d-sm-block d-none" cols="7">
     <v-col style="" cols="11">
     
   <v-card
@@ -109,13 +109,37 @@ anytime you make a purchase.</v-list-item-subtitle>
     </v-col>
       
     </v-col>
+
+    <v-col class="d-flex d-sm-none justify-center mt-5">
+      <span style="font-size:18px;color:rgba(15, 45, 82, 1);" >No Transactions</span>
+    </v-col>
+
+      <v-overlay :value="overlay">
+        <Wallet class="d-sm-block d-none" style="width:433px"/>
+        <v-col style="d-flex flex-column justify-end align-end">
+         <Wallet class="d-sm-none d-block" style="width:420px"/>
+        </v-col>
+      </v-overlay>
+
+      
     
   </v-row>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  data(){
+    return{
+      overlay:false
+    }
+  },
+  methods:{
+     closeOverlay(){
+             this.overlay=false
+          
+         }
+  }
 }
 </script>
 
