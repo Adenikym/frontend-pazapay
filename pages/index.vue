@@ -58,7 +58,7 @@ style="width:80%;background:#fff;color:#fff"
     <v-list-item three-line>
       <v-list-item-content>
        
-        <v-list-item-title style="color:rgba(55, 80, 111, 1);font-size:18px;" class="text-h6" color="white">
+        <v-list-item-title style="color:rgba(55, 80, 111, 1);font-size:18px;"  color="white">
        Buy. Shop. Get Reward
         </v-list-item-title>
         <v-list-item-subtitle>Get cashback reward from marketplace

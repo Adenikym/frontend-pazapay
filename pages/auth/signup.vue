@@ -53,7 +53,7 @@
     ></v-text-field>
 
      <v-text-field
-      v-model="name"
+      v-model="phone"
     
       :rules="nameRules"
       label="Phone Number"
@@ -63,7 +63,7 @@
     ></v-text-field>
 
      <v-text-field
-      v-model="name"
+      v-model="username"
     
       :rules="nameRules"
       label="Username"
@@ -73,13 +73,15 @@
     ></v-text-field>
 
     <v-text-field
-      v-model="name"
-    
+      v-model="pass"
+     :value="myPass"
       :rules="nameRules"
       label="Password"
       required
       outlined
       :append-icon="value ? 'mdi-eye' : 'mdi-eye-off'"
+       @click:append="() => (value = !value)"
+    :type="value ? 'password' : 'text'"
     ></v-text-field>
 
   
@@ -125,7 +127,15 @@
 </template>
 <script>
 export default {
-layout:'auth'
+layout:'auth',
+data(){
+  return{
+    value:String,
+    phone:'',
+    username:'',
+    pass:''
+  }
+}
 }
 </script>
 

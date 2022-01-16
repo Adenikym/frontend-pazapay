@@ -9,7 +9,7 @@
       fixed
       app
       class="pl-4 d-sm-block d-none"
-      active-class=""
+    
     >
     <img class="mt-4 mb-3" src="../assets/Logo.svg" alt="">
       <v-list class="mt-4 ml-6">
@@ -100,6 +100,7 @@
     :value="value"
     color="blue"
     grow
+    fixed
     
   >
     <v-btn to="/">
@@ -137,7 +138,7 @@ export default {
   data () {
     return {
       clipped: false,
-      drawer: true,
+      drawer: false,
        value: 1 ,
       fixed: false,
       items: [

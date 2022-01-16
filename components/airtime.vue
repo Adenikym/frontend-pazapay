@@ -35,26 +35,27 @@
         </v-row>
     <v-text-field
       v-model="Amout"
-      :counter="10"
+     
       :rules="nameRules"
-      label="Name"
+      label="Amount"
       required
       color="grey"
       outlined
       placeholder="Amount"
+      class="text-color"
       
     ></v-text-field>
 
      <v-text-field
-      v-model="Amout"
-      :counter="10"
+      v-model="Amount"
+      
       :rules="nameRules"
-      label="Name"
+      label="Phone Number"
       required
       color="grey"
       outlined
-      placeholder="Amount"
-      
+      placeholder="Phone"
+       class="text-color"
     ></v-text-field>
 
   
@@ -99,6 +100,8 @@
     data: () => ({
       valid: true,
       name: '',
+      Phone:'',
+      Amount:'',
       nameRules: [
         v => !!v || 'Name is required',
         v => (v && v.length <= 10) || 'Name must be less than 10 characters',
@@ -141,10 +144,12 @@
   border-color: rgba(166, 166, 166, 1);
 }
 
-  .text-green input {
-      color: green !important;
-    }
+   .text-color >>> .v-text-field__slot input {
+    color: grey
+  }
 
-
+   .text-color >>> .v-text-field__slot label {
+    color: grey
+  }
 
 </style>

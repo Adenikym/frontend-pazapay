@@ -8,7 +8,14 @@
         alt="profile picture"
       >
     </v-avatar>
+    <!-- <v-file-input
+  chips
+  hide-input
+  small-chips
+  truncate-length="15"
+>nnnn</v-file-input> -->
     <p class="mt-3">Tap to change picture</p>
+   <v-btn class="d-sm-none d-block" text to="/auth/login" color="rgba(255, 148, 143, 1)">Logout</v-btn>
 <!-- 
     edit profile form -->
 
@@ -59,7 +66,7 @@
 export default {
  data: () => ({
       items: ['Foo', 'Bar', 'Fizz', 'Buzz'],
-      form:""
+      form:"Personal"
     }),
 
     methods:{
