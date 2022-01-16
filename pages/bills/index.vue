@@ -32,15 +32,19 @@
 </v-col>
 
 
-    <v-overlay :value="overlay">
-        <airtime style="width:433px;"/>
-        
-        </v-overlay>   
+     <v-overlay :value="overlay">
+        <airtime class="d-sm-block d-none" style="width:433px"/>
+        <v-col style="d-flex flex-column justify-end align-end">
+         <airtime class="d-sm-none d-block" style="width:420px"/>
+        </v-col>
+      </v-overlay>
   </v-row>
 </template>
 
 <script>
+import airtime from '../../components/airtime.vue'
 export default {
+  components: { airtime },
 data(){
     return{
          overlay: false,

@@ -8,7 +8,7 @@
       :clipped="clipped"
       fixed
       app
-      class="pl-4"
+      class="pl-4 d-sm-block d-none"
       active-class=""
     >
     <img class="mt-4 mb-3" src="../assets/Logo.svg" alt="">
@@ -39,7 +39,7 @@
       style="border-bottom:1.5px solid grey"
 
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-sm-block d-none" />
       <!-- <v-btn
         icon
         @click.stop="miniVariant = !miniVariant"
@@ -58,11 +58,19 @@
      </div>
    
       <v-spacer />
-       <nuxt-link to="/auth/login" style="text-decoration:none">  
+
+
+       <nuxt-link to="/auth/login" class="d-sm-block d-none" style="text-decoration:none">  
      <v-btn style="text-transform:none;font-size:18px;font-weight:500" text color="rgba(255, 148, 143, 1)">
        Logout
      </v-btn>
        </nuxt-link>
+
+<!-- mobile -->
+
+<v-btn class="d-sm-none d-block" text color="#fff" to="/">
+  <img src="../assets/mobile-log-.svg" alt="">
+</v-btn>
     </v-app-bar>
     <v-main>
       <v-container>
@@ -86,6 +94,39 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer> -->
+
+    <div class="d-sm-none d-block">
+  <v-bottom-navigation
+    :value="value"
+    color="blue"
+    grow
+    
+  >
+    <v-btn to="/">
+      <span>Dashboard</span>
+
+      <v-icon>mdi-apps</v-icon>
+    </v-btn>
+
+    <v-btn to="/transfer">
+      <span>Transfer</span>
+
+      <v-icon>mdi-swap-horizontal</v-icon>
+    </v-btn>
+
+    <v-btn to="/bills">
+      <span>Pay Bills</span>
+
+      <v-icon>mdi-credit-card</v-icon>
+    </v-btn>
+
+       <v-btn to="/Profile">
+      <span>Profile</span>
+
+      <v-icon>mdi-account-outline</v-icon>
+    </v-btn>
+  </v-bottom-navigation>
+</div>
   
   </v-app>
 </template>
@@ -97,6 +138,7 @@ export default {
     return {
       clipped: false,
       drawer: true,
+       value: 1 ,
       fixed: false,
       items: [
         {
