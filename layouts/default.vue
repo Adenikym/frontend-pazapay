@@ -139,7 +139,7 @@ export default {
     return {
       clipped: false,
       drawer: false,
-       value: 1 ,
+       value: '' ,
       fixed: false,
       items: [
         {
