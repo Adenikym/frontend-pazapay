@@ -49,6 +49,37 @@
        </v-col>
   
      </v-row>
+
+
+     <!-- mobile carousel -->
+
+
+  <v-carousel style="height:150px" v-model="model" class="d-sm-none d-block rounded-lg"  hide-delimiter-background
+    show-arrows-on-hover cycle>
+    <v-carousel-item
+      v-for="(color, i) in colors"
+      :key="i"
+   
+    >
+      <v-sheet
+        color="rgba(38, 115, 209, 1)"
+        height="100%"
+      class="px-5 py-2"
+      >
+        <v-row
+          class="fill-height"
+      
+        
+        >
+          <div class="py-4 px-4 mt-5">
+        <p style="font-size:18px;color:#fff;line-height:15px;">  {{color.title }}</p>  
+        <span style="font-size:28px;color:#fff;">{{color.amount}}</span>
+          </div>
+        </v-row>
+      </v-sheet>
+    </v-carousel-item>
+  </v-carousel>
+
  </div>
     
     </v-col>
@@ -124,6 +155,13 @@ export default {
         desserts: [
        
         ],
+         model: 0,
+      colors: [
+      {title:"Available Balance", amount:"₦ 0.00"},
+      {title:"Total Amount Transferred", amount:"₦ 0.00"},
+      {title:"Successful Transfers", amount:0},
+      
+      ],
       }
     },
    methods:{
