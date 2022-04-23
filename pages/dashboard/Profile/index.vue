@@ -4,7 +4,7 @@
       <!-- user avatar -->
       <v-avatar style="height:100px;width:100px;">
       <img
-        src="../../assets/avatar.png"
+        src="../../../assets/avatar.png"
         alt="profile picture"
       >
     </v-avatar>

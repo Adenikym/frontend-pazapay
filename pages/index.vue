@@ -1,150 +1,260 @@
 <template>
-  <v-row style="background: #fff;
-">
-    <v-col    cols="12" sm="5" md="5" class="d-flex flex-column  mt-3">
-  
-    
-  <v-card
-    class="mx-auto rounded-xl mt-4 px-3"
+  <v-col class="">
 
-style="width:90%;background:rgba(38, 115, 209, 1);color:#fff"
-    outlined
+    <v-col style="background: rgba(247, 248, 250, 1);" cols="12" class="top-section">
+  <navbar/>
+
+  <v-col class="d-flex justify-space-around">
+<img src="../assets/left-shapes.svg" alt="">
+
+<div class="d-flex flex-column align-center">
+
+  <v-btn elevation="0" class="rounded-xl" color="rgba(38, 115, 209, 0.04)" style="color:rgba(38, 115, 209, 1);text-transform:none;"  >Simplify your life. Upgrade your lifestyle!</v-btn>
+  <p class="bold-text mt-6">Banking just got smarter and easier with Paza-pay</p>
+
+  <p class="text-center sub-text">Fastest way to pay your bills, recharge your mobile, shop <br> online and do a lot more!</p>
+
+  <v-btn to="/auth/signup" style="text-transform:none;" color="rgba(38, 115, 209, 1)" text>Register <v-icon>mdi-arrow-right</v-icon></v-btn>
+
+<div class="d-flex mt-4 mb-5">
+<img src="../assets/appstore-badge.svg" alt="">
+<img class="ml-4" src="../assets/gplay-badge.svg" alt="">
+</div>
+</div>
+
+<img src="../assets/right-pattern.svg" alt="">
+  </v-col>
+    </v-col>
+
+    <v-col class="avatar-section d-flex justify-space-around align-center py-5">
+<img class="mt-5 mb-5" src="../assets/ambassador.png" alt="">
+
+<v-col class="mt-5 mb-5" cols="5">
+  <p class="ab-head">With pAzaPay your bills lifestlye is 
+now in your hands</p>
+
+<p  class="ab-sub">With pAzaPay, there are really no limits to how convenient
+   and exciting not just Bill Payment, 
+  but life can be. It’s really up to you to decide.</p>
+
+  <v-btn to="/auth/signup" style="text-transform:none;" color="rgba(38, 115, 209, 1)" text>Create a new account <v-icon>mdi-arrow-right</v-icon></v-btn>
+
+  <div class="d-flex mt-4 mb-5">
+<img src="../assets/appstore-badge.svg" alt="">
+<img class="ml-4" src="../assets/gplay-badge.svg" alt="">
+</div>
+</v-col>
+    </v-col>
+
+    <v-col style="background: rgba(247, 248, 250, 1)" class="pay-section d-flex justify-space-around align-center">
+
+<v-col cols="5">
+  <p class="ab-head">Choose pAzaPay because you
+deserve better.</p>
+
+<p class="ab-sub">Because we understand your need for convenience, flexibility, and control, 
+  we have provided a solution that meets your needs. Enjoy banking that was designed just for you.</p>
+
+ <div class="d-flex">
+   <img src="" alt="">
+   <p class="list-text">Open an account in just a few minutes</p>
+ </div>
+ <div class="d-flex">
+   <img src="" alt="">
+   <p class="list-text">Your account is secured with some advance security </p>
+ </div>
+ <div class="d-flex">
+   <img src="" alt="">
+   <p class="list-text">Pay your bils anytme, anywhere</p>
+ </div>
+ <div class="d-flex">
+   <img src="" alt="">
+   <p class="list-text">Online shopping made easy for you</p>
+ </div>
  
-  >
-    <v-list-item three-line>
-      <v-list-item-content>
-       
-        <v-list-item-title style="color:#fff" class="text-h6  ">
-          Balance
-        </v-list-item-title>
-        <v-list-item-subtitle style="color:#fff;font-size:9px;">Today 20th September 2021</v-list-item-subtitle>
-      </v-list-item-content>
-
-   <v-btn  @click="overlay = !overlay" color="#fff" style="color:rgba(38, 115, 209, 1);text-transform:none"  depressed >
-     Add Money
-   </v-btn>
-
-   
-    </v-list-item>
-
-    <div  cols="12" class="d-flex flex-row justify-space-between py-3 px-3">
-      <v-text
-       
-        rounded
-        text
-        text-h5
-        color="white"
-        style="font-size:30px"
-      >
-      ₦ 0.00
-      </v-text>
-
-      <v-icon color="white">
-    mdi-eye 
-   </v-icon>
-    </div>
-  </v-card>
-
+ <v-btn to="/auth/signup" style="text-transform:none;" color="rgba(38, 115, 209, 1)" text>Learn more about pAzaPay <v-icon>mdi-arrow-right</v-icon></v-btn>
  
-  
+</v-col>
 
-   
-       <v-card
-    class="mx-auto mt-6 rounded-lg"
-
-style="width:80%;background:#fff;color:#fff"
-    outlined
-  >
-    <v-list-item three-line>
-      <v-list-item-content>
-       
-        <v-list-item-title style="color:rgba(55, 80, 111, 1);font-size:18px;"  color="white">
-       Buy. Shop. Get Reward
-        </v-list-item-title>
-        <v-list-item-subtitle>Get cashback reward from marketplace
-anytime you make a purchase.</v-list-item-subtitle>
-
-
-      </v-list-item-content>
-
- 
-
-   
-    </v-list-item>
-   
- <v-btn text color="rgba(38, 115, 209, 1)"   style="text-transform:none">
-  Get Started
-</v-btn>
-
-  
-  </v-card>
-
-
-
-
-   
-
-   
-    </v-col>
-
-     <v-col class="d-sm-block d-none" cols="7">
-    <v-col style="" cols="11">
-    
-  <v-card
-    class=" px-0 mt-4 "
-
-    outlined
-    style="height:80vh"
-  >
-    <div style="border-bottom:1px solid  rgba(55, 80, 111, 0.35)"  class="py-4 text-overline">
-      <h5 style="font-size:18px;font-weight:400;text-transform:none" class="ml-4">No Transactions</h5>
-    </div>
-    <div style="height:80%;" class="d-flex justify-center align-center">
-      <p style="font-size:12px;color:rgba(55, 80, 111, 1)">You do not  have any transactions yet</p>
-    </div>
-
-  
-  </v-card>
-
-    </v-col>
-      
-    </v-col>
-
-    <v-col class="d-flex d-sm-none justify-center mt-5">
-      <span style="font-size:18px;color:rgba(15, 45, 82, 1);" >No Transactions</span>
-    </v-col>
-
-      <v-overlay :value="overlay">
-        <Wallet class="d-sm-block d-none" style="width:433px"/>
-        <v-col style="d-flex flex-column justify-end align-end">
-         <Wallet class="d-sm-none d-block" style="width:420px"/>
-        </v-col>
-      </v-overlay>
+      <img src="../assets/display-app.svg" alt="">
 
       
+
+    </v-col>
+
+    <v-col class="steps-section py-5">
+
+      <p class="ab-head text-center">More ways in which VULTe makes your life easier.</p>
+<v-col class="d-flex justify-center">
+
+<v-col cols="11" class="d-flex flex-wrap">
+
+  <div class="col-6 d-flex flex-column justify-center">
+  <div class="d-flex align-center">
+    <img src="../assets/transfer.svg" alt="">
+    <img class="ml-4" src="../assets/arrow.svg" alt="">
+  </div>
+  <p class="mt-4 way-head">Transfer made easy</p>
+  <p>Transfer money instantly from your account in any bank to any other bank account in Nigeria.</p>
+</div>
+  <div class="col-6 d-flex flex-column justify-center">
+  <div class="d-flex align-center">
+    <img src="../assets/fund.svg" alt="">
+    <img class="ml-4" src="../assets/arrow.svg" alt="">
+  </div>
+  <p class="mt-4 way-head">Fund your account</p>
+  <p>Move money easily to your account from any of your cards (Visa card, Mastercard or Verve card) linked to Nigerian bank accounts.</p>
+</div>
+  <div class="col-6">
+  <div class="d-flex align-center">
+    <img src="../assets/wallet.svg" alt="">
+    <img class="ml-4" src="../assets/arrow.svg" alt="">
+  </div>
+  <p class="mt-4 way-head">Virtual Wallet</p>
+  <p>With pAzaPay, send and receive money to any username or bank account instantly.</p>
+</div>
+  <div class="col-6">
+  <div class="d-flex align-center">
+    <img src="../assets/bill-pay.svg" alt="">
+    <img class="ml-4" src="../assets/arrow.svg" alt="">
+  </div>
+  <p class="mt-4 way-head">Bills payment</p>
+  <p>Pay for your electricity, internet, and cable TV subscriptions with ease. </p>
+</div>
+
+</v-col>
+
+</v-col>
+
+    </v-col>
+    <v-col style="background:rgba(38, 115, 209, 1);" class="simplify-section py-6 d-flex justify-space-around align-center">
+
+      <img class="mt-6 mb-6"  style="width:30%" src="../assets/faq.svg" alt="">
+
+      <v-col class="mt-6 mb-6" cols="5" style="color:#fff">
+<p class="simp-head">Simple! Our goal is to simplify your life
+ and upgrade your lifestyle.</p>
+ <p>Together we can smash that goal!</p>
+ <p>Help us to serve you better</p>
+ <p>Our 24/7 customer support is open to suggestions
+on how to make your life easier.</p>
+      </v-col>
+
+    </v-col>
+    <v-col class="tribe-section d-flex justify-center">
+
+      <v-col class=" d-flex flex-column align-center" cols="5">
+<p class="ab-head">Join the pAzaPay tribe</p>
+<p class="text-center tribe">It's time to live that life of convenience, freedom and control 
+  you have always wanted. Download the VULTe app and 
+  sign up in a few minutes to
+   join the VULTe tribe now.</p>
+   <div class="d-flex mt-4 mb-5">
+<img src="../assets/appstore-badge.svg" alt="">
+<img class="ml-4" src="../assets/gplay-badge.svg" alt="">
+</div>
+</v-col>
+    </v-col>
+
+    <foot/>
     
-  </v-row>
+
+  </v-col>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage',
-  data(){
-    return{
-      overlay:false
-    }
-  },
-  methods:{
-     closeOverlay(){
-             this.overlay=false
-          
-         }
-  }
+layout:'auth'
 }
 </script>
 
 <style scoped>
-.btn {
-  text-transform: unset !important;
+.bold-text{
+
+font-size: 30px;
+font-weight: 600;
+line-height: 45px;
+letter-spacing: 0px;
+
+
+}
+
+.sub-text{
+
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: center;
+color: rgba(55, 80, 111, 1);
+
+
+}
+
+.ab-head{
+  font-family: Poppins;
+font-size: 30px;
+font-weight: 500;
+line-height: 50px;
+letter-spacing: 0px;
+color: rgba(15, 45, 82, 1);
+
+
+}
+
+
+.ab-sub{
+  font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0px;
+text-align: left;
+color: rgba(55, 80, 111, 1);
+
+}
+
+.list-text{
+  font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+letter-spacing: 0px;
+color: rgba(55, 80, 111, 1);
+
+
+}
+
+.way-head{
+  font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0px;
+color: rgba(15, 45, 82, 0.8);
+
+
+}
+
+.simp-head{
+  font-family: Poppins;
+font-size: 30px;
+font-weight: 600;
+line-height: 50px;
+letter-spacing: 0px;
+
+
+}
+
+
+.tribe{
+  font-family: Poppins;
+font-size: 20px;
+font-weight: 500;
+line-height: 30px;
+letter-spacing: 0px;
+
+color: rgba(55, 80, 111, 1);
+
 }
 </style>

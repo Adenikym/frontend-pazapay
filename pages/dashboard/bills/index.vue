@@ -5,25 +5,25 @@
 
 <v-col cols="5" sm="4" md="2"  class="ml-4  d-flex  flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
-<img src="../../assets/wifi.svg" alt="">
+<img src="../../../assets/wifi.svg" alt="">
 </v-card>
 <span class="mt-3">Data</span>
 </v-col>
 <v-col   @click="overlay = !overlay" cols="5" sm="4" md="2" class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
-<img src="../../assets/airtime.svg" alt="">
+<img src="../../../assets/airtime.svg" alt="">
 </v-card>
 <span class="mt-3">Airtime</span>
 </v-col>
 <v-col cols="5" sm="4" md="2"  class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
-<img src="../../assets/lightbulb.svg" alt="">
+<img src="../../../assets/lightbulb.svg" alt="">
 </v-card>
 <span class="mt-3">Power</span>
 </v-col>
 <v-col cols="5" sm="4" md="2"  class="ml-4  d-flex flex-column justify-center align-center"  >
     <v-card style="height:120px;width:100%" color="#fff" class="d-flex justify-center align-center py-6 px-3">
-<img src="../../assets/cable.svg" alt="">
+<img src="../../../assets/cable.svg" alt="">
 </v-card>
 <span class="mt-3">Cable</span>
 </v-col>
@@ -42,9 +42,9 @@
 </template>
 
 <script>
-import airtime from '../../components/airtime.vue'
+
 export default {
-  components: { airtime },
+ 
 data(){
     return{
          overlay: false,

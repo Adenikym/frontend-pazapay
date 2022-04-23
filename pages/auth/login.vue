@@ -106,7 +106,7 @@ export default {
 layout:'auth',
 data(){
   return{
-    value:String
+    value:String,
   }
 }
 }

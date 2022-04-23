@@ -121,7 +121,7 @@
       <v-icon>mdi-credit-card</v-icon>
     </v-btn>
 
-       <v-btn to="/Profile">
+       <v-btn to="/profile">
       <span>Profile</span>
 
       <v-icon>mdi-account-outline</v-icon>
@@ -161,7 +161,7 @@ export default {
          {
           icon: 'mdi-account-outline',
           title: 'Profile',
-          to: '/Profile'
+          to: '/profile'
         }
       ],
       miniVariant: false,
