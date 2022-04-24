@@ -48,7 +48,7 @@ now in your hands</p>
 
     <v-col style="background: rgba(247, 248, 250, 1)" class="pay-section d-flex justify-space-around align-center">
 
-<v-col cols="5">
+<v-col class="px-5" cols="5">
   <p class="ab-head">Choose pAzaPay because you
 deserve better.</p>
 
@@ -171,7 +171,7 @@ layout:'auth'
 <style scoped>
 .bold-text{
 
-font-size: 30px;
+font-size: 28px;
 font-weight: 600;
 line-height: 45px;
 letter-spacing: 0px;
