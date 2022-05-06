@@ -6,7 +6,7 @@
 
  <v-col cols="8">
 
-    <v-card style="margin-top:70%" height="115px"  rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4 offset-2 rounded-xl">
+    <v-card style="margin-top:28%" height="115px"  rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4 offset-2 rounded-xl">
         <span class="ml-2" style="color:rgba(15, 45, 82, 1);font-weight:500;font-size:26px">Login</span>
         <br>
         
@@ -15,13 +15,10 @@
 
     </v-col>
 </v-col>
-<v-col  sm="6" md="6" cols="12" class="">
-    <v-col class="d-flex    justify-end px-4 py-4 mt-4">
-      <span class="mt-3">Don't have an account?</span>
-      
-  <nuxt-link to="/auth/signup">  <v-btn  height="50px" text="true" color="rgba(38, 115, 209, 1)" depressed style="background:transparent;border:1.2px solid rgba(38, 115, 209, 1);text-transform:lowercase" class="ml-2 py-4 mr-4">Sign up here</v-btn>
-  </nuxt-link>
-  </v-col>
+<v-col  sm="6" md="6" cols="12" class="d-flex flex-column align-center justify-center ">
+
+
+  <v-card  class="mt-6 col-10">
 
   <div class="">
       <img src="../../assets/Logo.svg" alt="">
@@ -32,7 +29,7 @@
     ref="form"
     v-model="valid"
     lazy-validation
- class="col-md-8 "
+ class="col-md-12 "
   >
 
     <v-text-field
@@ -61,12 +58,12 @@
     Forgot Password
 </v-btn>
 
-<div class="d-flex justify-end mt-4">
-   <nuxt-link to="/">  
-<v-btn height="40px" depressed color="rgba(38, 115, 209, 1)" style="text-transform:lowercase;"  class="d-flex px-4">
+<div class="d-flex  mt-4">
+
+<v-btn height="40px" depressed color="rgba(38, 115, 209, 1)" style="text-transform:lowercase;"  class="col-12  px-4">
     <span style="color:#fff;">Login to your account</span>
 </v-btn>
-   </nuxt-link>
+
 </div>
  
 
@@ -96,6 +93,15 @@
       Reset Validation
     </v-btn> -->
   </v-form>
+
+     <v-col class="d-flex    px-4  ">
+      <span class="mt-2">Don't have an account?</span>
+      
+ <v-btn text   color="rgba(38, 115, 209, 1)" depressed style="background:transparent;text-transform:none" class="ml-2 mr-4">Sign up here</v-btn>
+  
+  </v-col>
+
+  </v-card>
 
 </v-col>
   </v-row>

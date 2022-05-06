@@ -1,12 +1,12 @@
 <template>
 
 
-  <v-row class="">
+  <v-col  class="d-flex justify-space-between">
 <v-col cols="6" class=" describe d-sm-block d-none">
 
 <v-col cols="8">
 
-    <v-card  style="margin-top:73%" height="115px" rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4  offset-2 rounded-xl">
+    <v-card  style="margin-top:23%" height="115px" rounded-lg color="rgba(255, 255, 255, 0.9)" class="px-5 py-4  offset-2 rounded-xl">
         <span class="ml-2" style="color:rgba(15, 45, 82, 1);font-weight:500;font-size:26px">Account Opening</span>
         <br>
         
@@ -16,22 +16,25 @@
 </v-col>
 <v-col sm="6" md="6" cols="12">
     <v-col class="d-flex    justify-end px-4 py-4 mt-4">
-      <span class="mt-3">Have an account?</span>
-      
-   <nuxt-link to="/auth/login">    <v-btn  height="50px" text="true" color="rgba(38, 115, 209, 1)" depressed style="background:transparent;border:1.2px solid rgba(38, 115, 209, 1);text-transform:lowercase" class="ml-2 py-4 mr-4 ">Login here</v-btn>
-   </nuxt-link>
+    
   </v-col>
 
-  <div class="">
+  <v-card class="col-lg-10 offset-1 mt-6">
+
+    <div class="col-12 d-flex justify-center">
+       <div class="">
       <img src="../../assets/Logo.svg" alt="">
   </div>
+    </div>
+
+ 
 
  
   <v-form
     ref="form"
     v-model="valid"
     lazy-validation
-    class="col-md-8"
+    class="col-md-10 offset-1"
   >
 
    <v-text-field
@@ -41,6 +44,8 @@
       label="Full Name"
       required
       outlined
+        height="45px"
+      dense
      
     ></v-text-field>
 
@@ -50,14 +55,18 @@
       label="E-mail"
       required
       outlined
+        height="45px"
+      dense
     ></v-text-field>
 
      <v-text-field
       v-model="phone"
     
       :rules="nameRules"
+        height="45px"
       label="Phone Number"
       required
+      dense
       outlined
     
     ></v-text-field>
@@ -68,6 +77,8 @@
       :rules="nameRules"
       label="Username"
       required
+      dense
+       height="45px"
       outlined
      
     ></v-text-field>
@@ -78,6 +89,8 @@
       :rules="nameRules"
       label="Password"
       required
+      dense
+      height="45px"
       outlined
       :append-icon="value ? 'mdi-eye' : 'mdi-eye-off'"
        @click:append="() => (value = !value)"
@@ -88,7 +101,7 @@
 
 
 <div class="d-flex justify-end mt-4">
-<v-btn height="40px" depressed color="rgba(38, 115, 209, 1)" style="text-transform:lowercase;"  class="d-flex px-4 col-5">
+<v-btn height="40px" depressed color="rgba(38, 115, 209, 1)" style="text-transform:lowercase;"  class="d-flex px-4 col-12">
     <span style="color:#fff;">sign up</span>
 </v-btn>
 </div>
@@ -121,8 +134,10 @@
     </v-btn> -->
   </v-form>
 
+  </v-card>
+
 </v-col>
-  </v-row>
+  </v-col>
 
 </template>
 <script>

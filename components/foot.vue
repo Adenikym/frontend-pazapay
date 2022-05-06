@@ -1,16 +1,15 @@
 <template>
-  <v-col class="px-0" style="background: rgba(38, 115, 209, 1);">
+  <v-col class="px-0" style="background:#fff;">
 
-<v-col class="d-flex justify-space-between align-center">
+<v-col class="d-flex justify-space-around align-center">
   
-<v-col cols="4" class="d-flex flex-column align-center">
-      <img src="../assets/b-logo.svg" alt="">
-     <div class="d-flex mt-4 mb-5">
-<img src="../assets/appstore-badge.svg" alt="">
-<img class="ml-4" src="../assets/gplay-badge.svg" alt="">
-</div>
-</v-col>
+<v-col>
+  <h4>Pazapay</h4>
+  <p>Pazapay is a bill payment platofrm.</p>
+  <div class="d-flex">
 
+  </div>
+</v-col>
     <v-col class="d-flex offset-1">
 
 <v-col  >
@@ -25,6 +24,10 @@
    <span class="foot-list" >About</span>
    <br>
    <span class="foot-list">Contact Us</span>
+</v-col>
+
+<v-col>
+  
 </v-col>
 <v-col>
      <h5 class="foot-heading">Contact</h5> 

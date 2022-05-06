@@ -30,7 +30,7 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar
+    <!-- <v-app-bar
       :clipped-left="clipped"
       fixed
       app
@@ -40,18 +40,7 @@
 
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" class="d-sm-block d-none" />
-      <!-- <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
-      >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn> -->
-      <!-- <v-btn
-        icon
-        @click.stop="clipped = !clipped"
-      >
-        <v-icon>mdi-application</v-icon>
-      </v-btn> -->
+     
      <div class="ml-4 mt-4">
        <h4 style="color:rgba(15, 45, 82, 1);font-size:18px;font-weight:500">Welcome !</h4>
      <p style="font-size:rgba(55, 80, 111, 1)">Evwidonor Allen</p>
@@ -66,12 +55,11 @@
      </v-btn>
        </nuxt-link>
 
-<!-- mobile -->
 
 <v-btn class="d-sm-none d-block" text color="#fff" to="/">
   <img src="../assets/mobile-log-.svg" alt="">
 </v-btn>
-    </v-app-bar>
+    </v-app-bar> -->
     <v-main>
       <v-container>
         <Nuxt />
@@ -109,19 +97,19 @@
       <v-icon>mdi-apps</v-icon>
     </v-btn>
 
-    <v-btn to="/transfer">
+    <v-btn to="/dashboard/transfer">
       <span>Transfer</span>
 
       <v-icon>mdi-swap-horizontal</v-icon>
     </v-btn>
 
-    <v-btn to="/bills">
+    <v-btn to="/dashboard/bills">
       <span>Pay Bills</span>
 
       <v-icon>mdi-credit-card</v-icon>
     </v-btn>
 
-       <v-btn to="/profile">
+       <v-btn to="/dashboard/profile">
       <span>Profile</span>
 
       <v-icon>mdi-account-outline</v-icon>
@@ -150,18 +138,18 @@ export default {
         {
           icon: 'mdi-swap-horizontal',
           title: 'Transfer',
-          to: '/transfer'
+          to: '/dashboard/transfer'
         },
          
          {
           icon: 'mdi-credit-card',
           title: 'Pay Bills',
-          to: '/bills'
+          to: '/dashboard/bills'
         },
          {
           icon: 'mdi-account-outline',
           title: 'Profile',
-          to: '/profile'
+          to: '/dashboard/profile'
         }
       ],
       miniVariant: false,
